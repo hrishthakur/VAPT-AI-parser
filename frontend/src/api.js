@@ -38,7 +38,11 @@ export const fetchVulnerabilities = async () => {
         const response = await apiClient.get('/vulnerabilities');
         return response.data || { vulnerabilities: [] };
     } catch (error) {
-        console.error('Error fetching vulnerabilities:', error);
+        console.error('Error fetching vulnerabilities:', {
+            message: error.message,
+            response: error.response?.data,
+            status: error.response?.status
+        });
         throw error;
     }
 };
