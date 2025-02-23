@@ -14,6 +14,6 @@ class Vulnerability(Base):
     severity = Column(String, nullable=False)
     sla = Column(String, nullable=True)
 
-    best_fix = Column(Text, nullable=True)
-    business_friendly_fix = Column(Text, nullable=True)
-    temporary_mitigation = Column(Text, nullable=True)
+    best_fix = Column(String, nullable=True)
+    business_friendly_fix = Column(String, nullable=True)
+    temporary_mitigation = Column(String, nullable=True)
